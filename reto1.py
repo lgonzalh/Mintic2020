@@ -1,41 +1,67 @@
-edad = int(input('Indicar la edad del paciente:'))
-peso = float(input('Indicar el peso del paciente en kilogramos:'))
-dias=0
-estado=""
+edad= int(input("ingrese la edad del paciente: "))
+kilos= float(input("ingrese el peso del paciente en kg: "))
+estado = ""
+kgs=0
+kgd=0
+dd=0
 
-if edad >=5 and edad <=10 and peso>=22 and peso<=24:
-    estado = "A"
-    print(f'El estado nutricional del paciente es {estado} y se requieren {dias} días de dieta para que alcance el peso máximo') 
-elif edad >=5 and edad <=10 and peso>24 and peso<=28:
-    estado = "A"
-    print(f'El estado nutricional del paciente es {estado} y se requieren {dias} días de dieta para que alcance el peso máximo')
-elif edad >=5 and edad <=10 and peso>28:
-    estado = "A"
-    print(f'El estado nutricional del paciente es {estado} y se requieren {dias} días de dieta para que alcance un peso saludable')
-elif edad >5 and edad <=10 and peso<16:
-    estado = "A"
-    print(f'El estado nutricional del paciente es {estado} y se requieren {dias} días de dieta para que alcance un peso saludable')
-elif : 
-    exit()
-
-if edad >=10 and edad <=13 and peso>=32 and peso<=43:
-    estado = "A"
-    print(f'El estado nutricional del paciente es {estado} y se requieren {dias} días de dieta para que alcance el peso máximo') 
-elif edad >=10 and edad <=13 and peso>43 and peso<=50:
-    estado = "A"
-    print(f'El estado nutricional del paciente es {estado} y se requieren {dias} días de dieta para que alcance el peso máximo')
-elif edad >=10 and edad <=13 and peso>50:
-    estado = "A"
-    print(f'El estado nutricional del paciente es {estado} y se requieren {dias} días de dieta para que alcance un peso saludable')
-elif edad >10 and edad <=13 and peso>16 and peso<30:
-    estado = "A"
-    print(f'El estado nutricional del paciente es {estado} y se requieren {dias} días de dieta para que alcance un peso saludable')    
+while edad >= 5 and edad <= 10: 
+        if kilos <= 15:
+            estado = "A"
+            kgs=22
+            kgd = ((2*60.1)-(2*24.4)+(1*30.5))/1000
+            dd = int((kgs - kilos)/kgd)+1
+            print(f'El estado nutricional del paciente es {estado} y se requieren {dd} dias de dieta para que alcance un peso saludable')
+        elif kilos >=29:
+            estado = "B"
+            kgs=24
+            kgd = ((0.6*60.1)-(4*24.4)+(1*30.5))/1000
+            dd = int((kgs - kilos)/kgd)+1        
+            print(f'El estado nutricional del paciente es {estado} y se requieren {dd} dias de dieta para que alcance un peso saludable')
+        else:
+            estado = "C"
+            kilos_maximo = 28
+            kgd = ((0.5*60.1)-(2*24.4)+(0.7*30.5))/1000
+            dd = int((kilos_maximo - kilos)/kgd)+1
+            print(f'El estado nutricional del paciente es {estado} y se requieren {dd} dias de dieta para que alcance el peso maximo')
+while edad >= 11 and edad <= 13:
+        if kilos <= 29:
+            estado = "A"
+            kgs=32
+            kgd = ((2*60.1)-(2*24.4)+(1*30.5))/1000
+            dd = int((kgs - kilos)/kgd)+1
+            print(f'El estado nutricional del paciente es {estado} y se requieren {dd} dias de dieta para que alcance un peso saludable')
+        elif kilos >= 51:
+            estado = "B"
+            kgs=43
+            kgd = ((0.6*60.1)-(4*24.4)+(1*30.5))/1000
+            dd = int((kgs - kilos)/kgd)+1             
+            print(f'El estado nutricional del paciente es {estado} y se requieren {dd} dias de dieta para que alcance un peso saludable')
+        else:
+            estado = "C"
+            kilos_maximo = 50
+            kgd = ((0.5*60.1)-(2*24.4)+(0.7*30.5))/1000
+            dd = int((kilos_maximo - kilos)/kgd)+1
+            print(f'El estado nutricional del paciente es {estado} y se requieren {dd} dias de dieta para que alcance el peso maximo')
+while edad >= 14 and edad <=17:
+        if kilos <= 51:
+            estado = "A"
+            kgs=56
+            kgd = ((2*60.1)-(2*24.4)+(1*30.5))/1000
+            dd = int((kgs - kilos)/kgd)+1
+            print(f'El estado nutricional del paciente es {estado} y se requieren {dd} dias de dieta para que alcance un peso saludable')
+        elif kilos >= 63:
+            estado = "B"
+            kgs=58
+            kgd = ((0.6*60.1)-(4*24.4)+(1*30.5))/1000
+            dd = int((kgs - kilos)/kgd)+1            
+            print(f'El estado nutricional del paciente es {estado} y se requieren {dd} dias de dieta para que alcance un peso saludable')
+        else:
+            estado = "C"
+            kilos_maximo = 63
+            kgd = ((0.5*60.1)-(2*24.4)+(0.7*30.5))/1000
+            dd = int((kilos_maximo - kilos)/kgd)+1
+            print(f'El estado nutricional del paciente es {estado} y se requieren {dd} dias de dieta para que alcance el peso maximo')
 else:
-    estado = "A"
-    print(f'El estado nutricional del paciente es {estado} y se requieren {dias} días de dieta para que alcance un peso saludable')
-    exit()
-
-print("Listo")
-#solucion(edad,peso)
-#("El estado nutricional del paciente es  y se requieren  días de dieta para que alcance el peso máximo")
-#print(f'El estado nutricional del paciente es {estado} y se requieren {dias} días de dieta para que alcance un peso saludable')
+    edad < 5 and edad > 17
+    print("el paciente esta fuera del rango de edad del programa de nutrición")
