@@ -1,4 +1,4 @@
-import math
+import math #importa libreria math
 
 def suma(a,b):
     return a + b
