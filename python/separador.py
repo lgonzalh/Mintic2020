@@ -14,8 +14,4 @@ def separador(cadena):
     return nombre, apellido
 
 resultado = separador('Luis Gonzalez')
-print(type(resultado), resultado)
-
-
-
-    
+print(type(resultado), resultado) 
