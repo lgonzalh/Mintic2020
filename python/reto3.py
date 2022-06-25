@@ -1,11 +1,8 @@
 import numpy as np
 import random
-
-
 texto = 'Today is Caturday!'
 
 def encriptado(texto):
-    
     clave = []
     list_unicode = []
     desordenada = []
