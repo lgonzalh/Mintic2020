@@ -28,4 +28,17 @@ public class Opera {
     double dividir(double x,double y){
         return(x/y);
     }
+    double AreaCirculo(int radio){
+        return(3.1416*(radio*radio));
+    }    
+    boolean estado(int cervezas){
+        boolean e=false;
+        if(cervezas>=5){
+            e=true;
+        }else
+        {
+            e=false;
+        }
+        return e;
+    }
 }

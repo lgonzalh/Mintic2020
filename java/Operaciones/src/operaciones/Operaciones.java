@@ -10,13 +10,15 @@ package operaciones;
  */
 public class Operaciones {
     public static void main(String[] args){
-       int resultado;
+       int resultado, r;
        double resultado1;
+       boolean estadoValor;
        //Instanciar objetos
        Opera op1=new Opera();
        //Asignar valores a los atributos del objeto
        op1.a=34;
        op1.b=24;
+       r=5;
        //Llamar metodos
        resultado=op1.suma(op1.a,op1.b);
        System.out.println("La suma de dos numeros es: "+resultado);
@@ -29,7 +31,13 @@ public class Operaciones {
        resultado1=op1.dividir(op1.b,op1.a);
        System.out.println("La division de dos numeros es: "+resultado1);
        resultado1=op1.dividir(op1.a,op1.b);
-       System.out.println("La division de dos numeros inv es: "+resultado1);    
+       System.out.println("La division de dos numeros inv es: "+resultado1); 
+       System.out.println("El area del circulo es: " + r + " es " + op1.AreaCirculo(r)); 
+       estadoValor=op1.estado(6);
+       if(estadoValor==true){
+           System.out.println("Embriagado");
+       }else{
+           System.out.println("No embriagado");
+       }
     }
-    
 }
